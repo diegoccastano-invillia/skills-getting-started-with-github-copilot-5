@@ -13,7 +13,7 @@ Uma aplicação FastAPI super simples que permite que estudantes visualizem e se
 1. Instale as dependências:
 
    ```
-   pip install fastapi uvicorn
+   pip install -r requirements.txt
    ```
 
 2. Execute a aplicação:
@@ -25,6 +25,14 @@ Uma aplicação FastAPI super simples que permite que estudantes visualizem e se
 3. Abra seu navegador e acesse:
    - Documentação da API: http://localhost:8000/docs
    - Documentação alternativa: http://localhost:8000/redoc
+
+## Testes
+
+Na raiz do repositório, execute:
+
+```
+pytest
+```
 
 ## Endpoints da API
 
