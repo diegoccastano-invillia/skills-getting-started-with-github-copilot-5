@@ -6,13 +6,14 @@ Uma aplicação FastAPI super simples que permite que estudantes visualizem e se
 
 - Visualizar todas as atividades extracurriculares disponíveis
 - Inscrever-se em atividades
+- Cancelar a inscrição de estudantes em atividades
 
 ## Primeiros Passos
 
 1. Instale as dependências:
 
    ```
-   pip install fastapi uvicorn
+   pip install -r requirements.txt
    ```
 
 2. Execute a aplicação:
@@ -25,12 +26,21 @@ Uma aplicação FastAPI super simples que permite que estudantes visualizem e se
    - Documentação da API: http://localhost:8000/docs
    - Documentação alternativa: http://localhost:8000/redoc
 
+## Testes
+
+Na raiz do repositório, execute:
+
+```
+pytest
+```
+
 ## Endpoints da API
 
 | Método | Endpoint                                                          | Descrição                                                                   |
 | ------ | ----------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | GET    | `/activities`                                                     | Obtém todas as atividades com seus detalhes e contagem atual de participantes |
 | POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Inscreve-se em uma atividade                                                |
+| DELETE | `/activities/{activity_name}/participants?email=student@mergington.edu` | Cancela a inscrição de um estudante em uma atividade |
 
 ## Modelo de Dados
 
